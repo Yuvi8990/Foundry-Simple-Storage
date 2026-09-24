@@ -36,10 +36,9 @@ It serves as a practical transition from browser-based IDEs toward a production-
 ```text
 ├── lib/                    # Dependencies (e.g., forge-std)
 ├── script/                 # Deployment and interaction scripts
-│   └── SimpleStorage.s.sol 
+│   └── DeploySimpleStorage.s.sol 
 ├── src/                    # Smart contract source code
 │   └── SimpleStorage.sol   
-├── test/                   # Unit and integration tests
-│   └── SimpleStorage.t.sol 
+├── test                    # Unit and integration tests
 ├── foundry.toml            # Foundry configuration file
 └── README.md               # Project documentation
