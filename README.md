@@ -1,66 +1,45 @@
-## Foundry
+# 📦 Foundry Simple Storage
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
+![Foundry](https://img.shields.io/badge/Foundry-Black?style=for-the-badge)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-Foundry consists of:
+## 📖 Overview
+A foundational Solidity smart contract rebuilt and deployed using Foundry's professional development toolchain. This project acts as a sandbox for exploring smart contract mechanics, demonstrating local blockchain deployment via Anvil, scripted deployments, and on-chain interaction using Cast.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+It serves as a practical transition from browser-based IDEs toward a production-grade development workflow, establishing the technical groundwork for deeper protocol analysis and vulnerability research.
 
-## Documentation
+---
 
-https://book.getfoundry.sh/
+## 📑 Table of Contents
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Usage & Commands](#-usage--commands)
+- [Local Deployment & Interaction](#-local-deployment--interaction)
+- [Security & Auditing Focus](#-security--auditing-focus)
+- [Daily Git Workflow](#-daily-git-workflow)
+- [License](#-license)
 
-## Usage
+---
 
-### Build
+## 🛠 Tech Stack
+- **Smart Contract Language:** Solidity (^0.8.0)
+- **Development Framework:** [Foundry](https://getfoundry.sh/)
+  - **Forge:** Ethereum testing framework
+  - **Cast:** CLI for interacting with EVM smart contracts
+  - **Anvil:** Local Ethereum node for testing
 
-```shell
-$ forge build
-```
+---
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## 📂 Project Structure
+```text
+├── lib/                    # Dependencies (e.g., forge-std)
+├── script/                 # Deployment and interaction scripts
+│   └── SimpleStorage.s.sol 
+├── src/                    # Smart contract source code
+│   └── SimpleStorage.sol   
+├── test/                   # Unit and integration tests
+│   └── SimpleStorage.t.sol 
+├── foundry.toml            # Foundry configuration file
+└── README.md               # Project documentation
