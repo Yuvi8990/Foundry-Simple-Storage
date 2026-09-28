@@ -45,8 +45,8 @@ It serves as a practical transition from browser-based IDEs (like Remix) toward 
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/Yuvi8990/foundry-simple-storage-f26.git](https://github.com/Yuvi8990/foundry-simple-storage-f26.git)
-cd foundry-simple-storage-f26
+git clone https://github.com/Yuvi8990/Foundry-Simple-Storage.git
+cd Foundry-Simple-Storage
 ```
 
 **2. Install dependencies**
@@ -85,7 +85,7 @@ anvil
 
 **2. Deploy the contract via Forge Script (in a second terminal):**
 ```bash
-forge script script/DeploySimpleStorage.s.sol --rpc-url [http://127.0.0.1:8545](http://127.0.0.1:8545) --broadcast --private-key <ANVIL_PRIVATE_KEY>
+forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key <ANVIL_PRIVATE_KEY>
 ```
 *(Note: Replace `<ANVIL_PRIVATE_KEY>` with one of the 10 private keys Anvil generates).*
 
@@ -98,7 +98,7 @@ cast call <DEPLOYED_CONTRACT_ADDRESS> "retrieve()"
 **4. Modify state using Cast (Send):**
 Sending a transaction to update `myFavoriteNumber` to `123`. This action changes the blockchain state and costs gas.
 ```bash
-cast send <DEPLOYED_CONTRACT_ADDRESS> "store(uint256)" 123 --rpc-url [http://127.0.0.1:8545](http://127.0.0.1:8545) --private-key <ANVIL_PRIVATE_KEY>
+cast send <DEPLOYED_CONTRACT_ADDRESS> "store(uint256)" 123 --rpc-url http://127.0.0.1:8545 --private-key <ANVIL_PRIVATE_KEY>
 ```
 
 ## 🛡️ Security & Auditing Focus
@@ -116,7 +116,7 @@ forge script script/DeploySimpleStorage.s.sol --rpc-url <RPC_URL> --account <ACC
 
 ## 🔄 Daily Git Workflow
 
-Standard version control practices were strictly adhered to during the development of this repository:
+Standard commits were made throughout development:
 ```bash
 git add .
 git commit -m "feat: implement SimpleStorage deployment script"
